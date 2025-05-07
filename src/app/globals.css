@@ -1,0 +1,85 @@
+@import "tailwindcss";
+@import "./fonts.css";
+
+
+@theme {
+  /* colors */
+  --color-red: #f04521;
+  --color-yellow: #fed97c;
+  --color-gray: #888;
+  --color-pink: #ffc2b0;
+
+  /* sizes */
+  --text-large: 1.5rem;
+  --text-medium: 1.25rem;
+  --text-regular: 1rem;
+  --text-small: .875rem;
+  --text-tiny: .75rem;
+
+  /* fonts */
+  --font-realce: "Realce";
+  --font-inter: "Inter";
+  --font-mentimun: "Mentimun";
+
+  
+}
+
+@layer base {
+
+  body {
+    @apply font-inter text-black text-sm bg-yellow antialiased
+  }
+
+  p, blockquote {
+    @apply leading-[1.4]
+  }
+
+  blockquote {
+    @apply border-l-5 border-red/30 py-2.5 px-5 text-lg
+  }
+
+  h1,h2,h3,h4,h5,h6 {
+    @apply font-realce font-normal mb-2.5 leading-[1.1];
+  }
+
+  /* headings */
+  h1 {
+    @apply font-realce text-[4rem];
+  }
+  h2 {
+    @apply text-[3rem];
+  }
+  h3 {
+    @apply text-[2.5rem];
+  }
+  h4 {
+    @apply text-[2rem];
+  }
+  h5 {
+    @apply text-[1.5rem]/[1.2];
+  }
+  h5 {
+    @apply text-base/[1.2];
+  }
+
+  /* heading variants */
+  h1.heading {
+    @apply text-[12rem]/[1];
+  }
+  h2.heading {
+    @apply text-[10rem]/[.9];
+  }
+  h3.heading {
+    @apply text-[6.5rem]/[.9];
+  }
+  h5.heading {
+    @apply text-[6.5rem]/[.9];
+  }
+}
+@layer components {
+  
+}
+@layer utilities {
+
+}
+
