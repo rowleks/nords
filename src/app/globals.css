@@ -17,10 +17,12 @@
   --text-tiny: .75rem;
 
   /* fonts */
-  --font-realce: "Realce";
-  --font-inter: "Inter";
-  --font-mentimun: "Mentimun";
+  --font-realce: "Realce", sans-serif;
+  --font-inter: "Inter", sans-serif;
+  --font-mentimun: "Mentimun", sans-serif;
 
+  /* breakpoints */
+  --breakpoint-xs: 30rem;
   
 }
 
@@ -44,7 +46,7 @@
 
   /* headings */
   h1 {
-    @apply font-realce text-[4rem];
+    @apply text-[4rem] xl:text-[6rem];
   }
   h2 {
     @apply text-[3rem];
@@ -64,7 +66,7 @@
 
   /* heading variants */
   h1.heading {
-    @apply text-[12rem]/[1];
+    @apply text-[12rem]/[1] uppercase;
   }
   h2.heading {
     @apply text-[10rem]/[.9];
@@ -77,9 +79,40 @@
   }
 }
 @layer components {
+  .btn {
+    @apply bg-yellow border-3 border-black shadow-[2px_2px_0_0_black] md:shadow-[2px_4px_0_0_black] relative hover:shadow-none hover:transform hover:translate-1 rounded-full cursor-pointer transition-all duration-300
+  }
+
+  .social-btn {
+    @apply flex justify-center items-center w-11 h-11 border-2 rounded-full transition-all duration-500 bg-yellow border-black shadow-[2px_2px_0_0_black] hover:shadow-none hover:transform hover:translate-1
+  }
+
+  .cart-quantity {
+    @apply absolute -top-2 right-0 w-6 h-6 flex items-center justify-center rounded-full border-2 border-yellow text-tiny bg-black text-white
+  }
+
+  .top-open {
+    @apply transform translate-y-[2px] rotate-[10deg];
+  }
+  .mid-open {
+    @apply transform translate-x-[150%]
+  }
+  .bottom-open {
+    @apply transform translate-x-[-1px] translate-y-[-2px] rotate-[-10deg]
+  }
+  
+  .close {
+    @apply transform translate-0 scale-100 skew-0;
+  }
+
+  .animate-link {
+    @apply hover:text-red transition-all duration-300 hover:animate-bounce
+  }
   
 }
 @layer utilities {
-
+  a.animate-bounce {
+    animation-iteration-count: 2;
+  }
 }
 
