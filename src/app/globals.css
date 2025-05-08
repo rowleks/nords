@@ -27,7 +27,6 @@
 }
 
 @layer base {
-
   body {
     @apply font-inter text-black text-sm bg-yellow antialiased
   }
@@ -66,7 +65,7 @@
 
   /* heading variants */
   h1.heading {
-    @apply text-[12rem]/[1] uppercase;
+    @apply text-[5rem]/[1] lg:text-[6.5rem] uppercase;
   }
   h2.heading {
     @apply text-[10rem]/[.9];
@@ -108,11 +107,32 @@
   .animate-link {
     @apply hover:text-red transition-all duration-300 hover:animate-bounce
   }
+
+  .featured {
+    --webkit-text-stroke-width: 3px;
+      --webkit-text-stroke-color: black;
+    @apply text-red tracking-[3px] capitalize font-mentimun text-[6rem] font-normal relative z-5
+  }
   
 }
+
 @layer utilities {
-  a.animate-bounce {
-    animation-iteration-count: 2;
+  .text-stroke-3 {
+    -webkit-text-stroke-width: 3px;
+    -webkit-text-stroke-color: black;
+
+  @media (max-width: 30rem) {
+    -webkit-text-stroke-width: 1px;
+  }
+  }
+  .text-stroke-6 {
+    -webkit-text-stroke-width: 6px;
+    -webkit-text-stroke-color: black;
+
+    @media (max-width: 30rem) {
+      -webkit-text-stroke-width: 2px;
+    }
   }
 }
+
 

@@ -90,7 +90,7 @@ export default function Navbar() {
 
       {/* Sliding NavLinks */}
       <div
-        className={`absolute top-0 left-0 w-full transition-transform duration-700 delay-500 ${
+        className={`absolute top-0 left-0 w-full transition-transform duration-700 delay-500 z-10 ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}
       >
