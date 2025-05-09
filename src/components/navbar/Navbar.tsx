@@ -27,7 +27,7 @@ export default function Navbar() {
             </Link>
 
             <div className="flex items-center gap-4 relative z-30">
-              <div className="relative min-w-11 cursor-pointer">
+              <div className="relative min-w-11 cursor-pointer hover:translate-x-1.5 transition-all duration-300">
                 <Image
                   src="/icons/cart-icon.svg"
                   alt="cart icon"

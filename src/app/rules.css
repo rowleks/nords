@@ -19,3 +19,14 @@
   font-style: normal;
   font-display: swap;
 }
+
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
