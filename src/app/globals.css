@@ -1,8 +1,6 @@
 @import "tailwindcss";
 @import "./rules.css";
 
-
-
 @theme {
   /* colors */
   --color-red: #f04521;
@@ -14,8 +12,8 @@
   --text-large: 1.5rem;
   --text-medium: 1.25rem;
   --text-regular: 1rem;
-  --text-small: .875rem;
-  --text-tiny: .75rem;
+  --text-small: 0.875rem;
+  --text-tiny: 0.75rem;
 
   /* fonts */
   --font-realce: "Realce", sans-serif;
@@ -24,23 +22,28 @@
 
   /* breakpoints */
   --breakpoint-xs: 30rem;
-  
 }
 
 @layer base {
   body {
-    @apply font-inter text-black text-sm bg-yellow antialiased
+    @apply font-inter text-black text-sm bg-yellow antialiased;
   }
 
-  p, blockquote {
-    @apply leading-[1.4]
+  p,
+  blockquote {
+    @apply leading-[1.4];
   }
 
   blockquote {
-    @apply border-l-5 border-red/30 py-2.5 px-5 text-lg
+    @apply border-l-5 border-red/30 py-2.5 px-5 text-lg;
   }
 
-  h1,h2,h3,h4,h5,h6 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
     @apply font-realce font-normal mb-2.5 leading-[1.1] uppercase;
   }
 
@@ -69,22 +72,22 @@
     @apply text-[5rem]/[1] xl:text-[8rem];
   }
   h2.heading {
-    @apply leading-[.9] text-[3.5rem] md:text-[5rem] lg:text-[8rem] ;
+    @apply leading-[.9] text-[3.5rem] md:text-[5rem] lg:text-[8rem];
   }
   h3.heading {
-    @apply text-[6.5rem]/[.9];
+    @apply leading-[.9] text-[3.25rem] md:text-[5rem] lg:text-[6.5rem];
   }
   h5.heading {
     @apply text-[6.5rem]/[.9];
   }
 }
 @layer components {
-  .wrapper { 
-    @apply max-w-[76rem] mx-auto
+  .wrapper {
+    @apply max-w-[76rem] mx-auto;
   }
 
   .btn {
-    @apply bg-yellow border-3 border-black shadow-[2px_2px_0_0_black] md:shadow-[2px_4px_0_0_black] relative hover:shadow-none hover:transform hover:translate-1 rounded-full cursor-pointer transition-all duration-300
+    @apply bg-yellow border-3 border-black shadow-[2px_2px_0_0_black] md:shadow-[2px_4px_0_0_black] relative hover:shadow-none hover:transform hover:translate-1 rounded-full cursor-pointer transition-all duration-300;
   }
 
   .product-card {
@@ -92,7 +95,7 @@
   }
 
   .social-btn {
-    @apply flex justify-center items-center w-11 h-11 border-2 rounded-full transition-all duration-500 bg-yellow border-black shadow-[2px_2px_0_0_black] hover:shadow-none hover:transform hover:translate-1
+    @apply flex justify-center items-center w-11 h-11 border-2 rounded-full transition-all duration-500 bg-yellow border-black shadow-[2px_2px_0_0_black] hover:shadow-none hover:transform hover:translate-1;
   }
 
   .tab {
@@ -100,46 +103,47 @@
   }
 
   .price {
-    @apply bg-black text-white text-xl/[1] font-medium rounded-[8px] p-2.5 absolute left-1/20 top-1/20
+    @apply bg-black text-white text-xl/[1] font-medium rounded-[8px] p-2.5 absolute left-1/20 top-1/20;
   }
 
   .cart-quantity {
-    @apply absolute -top-2 right-0 w-6 h-6 flex items-center justify-center rounded-full border-2 border-yellow text-tiny bg-black text-white
+    @apply absolute -top-2 right-0 w-6 h-6 flex items-center justify-center rounded-full border-2 border-yellow text-tiny bg-black text-white;
   }
 
   .top-open {
     @apply transform translate-y-[2px] rotate-[10deg];
   }
   .mid-open {
-    @apply transform translate-x-[150%]
+    @apply transform translate-x-[150%];
   }
   .bottom-open {
-    @apply transform translate-x-[-1px] translate-y-[-2px] rotate-[-10deg]
+    @apply transform translate-x-[-1px] translate-y-[-2px] rotate-[-10deg];
   }
-  
+
   .close {
     @apply transform translate-0 scale-100 skew-0;
   }
 
   .animate-link {
-    @apply hover:text-red transition-all duration-300 hover:animate-bounce
+    @apply hover:text-red transition-all duration-300 hover:animate-bounce;
   }
 
   .featured {
     --webkit-text-stroke-width: 3px;
-      --webkit-text-stroke-color: black;
+    --webkit-text-stroke-color: black;
     @apply text-red tracking-[3px] capitalize font-mentimun text-[12vw] md:text-7xl lg:text-8xl font-normal relative z-5;
   }
-  
-}
 
-@layer utilities {
-
-  .fade-in {
-    animation: fadeIn 0.8s ease-in-out;
+  .arrow {
+    @apply border-4 border-black bg-white rounded-full flex justify-center items-center w-12 h-12;
   }
 
-  /* .review-swiper .swiper-button-prev, 
+  @layer utilities {
+    .fade-in {
+      animation: fadeIn 0.8s ease-in-out;
+    }
+
+    /* .review-swiper .swiper-button-prev, 
   .review-swiper .swiper-button-next {
     display: none !important;
     color: var(--color-red) !important;
@@ -156,51 +160,50 @@
   } 
   Uncomment this when you want to show the navigation buttons  
   */
-  
-  .review-swiper .swiper-pagination {
-    bottom: 2px !important;
-  }
-  
-  @media (min-width: 48rem) {
-    .review-swiper .swiper-pagination {
-      bottom: 10% !important;
-    }
-  }
-  .review-swiper .swiper-pagination-bullet {
-    width: 20px !important;
-    height: 20px !important;
-    background: rgba(0, 0, 0, 0.2) !important;
-    opacity: 1 !important;
-  }
 
-  .review-swiper .swiper-pagination-bullet-active {
-    background: var(--color-red) !important;
-    width: 24px !important;
-    height: 24px !important;
-  }
-  .text-stroke-3 {
-    -webkit-text-stroke-width: 3px;
-    -webkit-text-stroke-color: black;
-  }
-  @media (max-width: 30rem) {
+    .review-swiper .swiper-pagination {
+      bottom: 2px !important;
+    }
+
+    @media (min-width: 48rem) {
+      .review-swiper .swiper-pagination {
+        bottom: 10% !important;
+      }
+    }
+    .review-swiper .swiper-pagination-bullet {
+      width: 20px !important;
+      height: 20px !important;
+      background: rgba(0, 0, 0, 0.2) !important;
+      opacity: 1 !important;
+    }
+
+    .review-swiper .swiper-pagination-bullet-active {
+      background: var(--color-red) !important;
+      width: 24px !important;
+      height: 24px !important;
+    }
     .text-stroke-3 {
-      -webkit-text-stroke-width: 1px;
+      -webkit-text-stroke-width: 3px;
+      -webkit-text-stroke-color: black;
     }
-  }
-  .text-stroke-6 {
-    -webkit-text-stroke-width: 6px;
-    -webkit-text-stroke-color: black;
-  }
-  @media (max-width: 48rem) {
-    .text-stroke-6 {
-      -webkit-text-stroke-width: 4px;
+    @media (max-width: 30rem) {
+      .text-stroke-3 {
+        -webkit-text-stroke-width: 1px;
+      }
     }
-  }
-  @media (max-width: 30rem) {
     .text-stroke-6 {
-      -webkit-text-stroke-width: 2px;
+      -webkit-text-stroke-width: 6px;
+      -webkit-text-stroke-color: black;
+    }
+    @media (max-width: 48rem) {
+      .text-stroke-6 {
+        -webkit-text-stroke-width: 4px;
+      }
+    }
+    @media (max-width: 30rem) {
+      .text-stroke-6 {
+        -webkit-text-stroke-width: 2px;
+      }
     }
   }
 }
-
-
