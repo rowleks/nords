@@ -68,7 +68,7 @@ export default function Navbar() {
             <Link href="/" className="cursor-pointer relative z-20">
               <Image
                 src="/images/nords-logo-black.png"
-                alt="nords logo"
+                alt="nords bakery logo"
                 width={125}
                 height={40}
               />

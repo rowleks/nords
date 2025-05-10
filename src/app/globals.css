@@ -38,6 +38,11 @@
     @apply border-l-5 border-red/30 py-2.5 px-5 text-lg;
   }
 
+  footer nav a,
+  footer p a {
+    @apply hover:text-yellow transition-all duration-300;
+  }
+
   h1,
   h2,
   h3,
@@ -64,7 +69,7 @@
     @apply text-[1.5rem]/[1.2];
   }
   h5 {
-    @apply text-base/[1.2];
+    @apply text-xl/[1.2];
   }
 
   /* heading variants */
