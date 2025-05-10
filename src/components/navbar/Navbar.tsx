@@ -1,16 +1,33 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import Link from "next/link";
 import NavLinks from "./NavLinks";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const navRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+        setIsMenuOpen(false);
+      }
+    };
+
+    if (isMenuOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMenuOpen]);
 
   return (
     <header className="relative py-6 md:py-5">
@@ -26,7 +43,7 @@ export default function Navbar() {
               />
             </Link>
 
-            <div className="flex items-center gap-4 relative z-30">
+            <div ref={navRef} className="flex items-center gap-4 relative z-30">
               <div className="relative min-w-11 cursor-pointer hover:translate-x-1.5 transition-all duration-300">
                 <Image
                   src="/icons/cart-icon.svg"
@@ -88,7 +105,6 @@ export default function Navbar() {
         </div>
       </div>
 
-      {/* Sliding NavLinks */}
       <div
         className={`absolute top-0 left-0 w-full transition-transform duration-700 delay-500 z-10 ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"

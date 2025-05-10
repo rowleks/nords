@@ -1,6 +1,8 @@
-import { MenuItem } from "../types/types";
+import { MenuItemType, ReviewType } from "../types/types";
 
-export const burgers: MenuItem[] = [
+// Menu Tabs
+
+export const burgers: MenuItemType[] = [
   {
     name: "Lamb Burger",
     src: "/images/lamb-burger.png",
@@ -39,7 +41,7 @@ export const burgers: MenuItem[] = [
   },
 ];
 
-export const sides: MenuItem[] = [
+export const sides: MenuItemType[] = [
   {
     name: "Nuggets",
     src: "/images/nuggets-and-fries.png",
@@ -60,7 +62,7 @@ export const sides: MenuItem[] = [
   },
 ];
 
-export const desserts: MenuItem[] = [
+export const desserts: MenuItemType[] = [
   {
     name: "Ice Cream",
     src: "/images/ice-cream.png",
@@ -78,5 +80,33 @@ export const desserts: MenuItem[] = [
     src: "/images/strawberry-cake.png",
     alt: "A slice of delicious strawberry cake",
     price: 5.49,
+  },
+];
+
+// Reviews
+export const reviews: ReviewType[] = [
+  {
+    name: "Emily Chen",
+    rating: 5,
+    comment:
+      "The vegan burger at Nord's is my go-to order. The patty is always cooked to perfection and the toppings are so fresh! The fries are also amazing.",
+    avatar: "/images/client1.webp",
+    occupation: "Marketing Specialist",
+  },
+  {
+    name: "David Lee",
+    rating: 4,
+    comment:
+      "I've been going to Nord's for years and I've never been disappointed. The service is always friendly and the food is consistently good. My only complaint is that the portions could be a bit bigger.",
+    avatar: "/images/client2.webp",
+    occupation: "Graphic Designer",
+  },
+  {
+    name: "Rachel Patel",
+    rating: 5,
+    comment:
+      "I recently tried the strawberry cake at Nord's and it was amazing! The cake was so moist and the flavor was incredible. I've been dreaming about it ever since.",
+    avatar: "/images/client3.webp",
+    occupation: "Event Planner",
   },
 ];
