@@ -7,15 +7,24 @@ import NavLinks from "./NavLinks";
 
 export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isNavbarVisible, setIsNavbarVisible] = useState(true);
+  const [lastScrollY, setLastScrollY] = useState(0);
   const navRef = useRef<HTMLDivElement>(null);
 
   const toggleMenu = () => {
     setIsMenuOpen((prev) => !prev);
   };
 
+  const menuToggleRef = useRef<HTMLDivElement>(null);
+
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
-      if (navRef.current && !navRef.current.contains(event.target as Node)) {
+      if (
+        navRef.current &&
+        !navRef.current.contains(event.target as Node) &&
+        menuToggleRef.current &&
+        !menuToggleRef.current.contains(event.target as Node)
+      ) {
         setIsMenuOpen(false);
       }
     };
@@ -29,8 +38,30 @@ export default function Navbar() {
     };
   }, [isMenuOpen]);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      const currentScrollY = window.scrollY;
+      const scrollThreshold = 100;
+
+      if (currentScrollY > lastScrollY && currentScrollY > scrollThreshold) {
+        setIsNavbarVisible(false);
+      } else if (currentScrollY < lastScrollY) {
+        setIsNavbarVisible(true);
+      }
+
+      setLastScrollY(currentScrollY);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [lastScrollY]);
+
   return (
-    <header className="relative py-6 md:py-5">
+    <header
+      className={`sticky top-0 z-50 bg-yellow py-6 md:py-5 transition-transform duration-300 ${
+        isNavbarVisible ? "translate-y-0" : "-translate-y-full"
+      }`}
+    >
       <div className="px-5 md:px-10">
         <div className="max-w-[90rem] mx-auto">
           <div className="flex items-center justify-between gap-15">
@@ -61,6 +92,7 @@ export default function Navbar() {
               </div>
 
               <div
+                ref={menuToggleRef}
                 aria-label="menu"
                 role="button"
                 aria-expanded={isMenuOpen}
@@ -106,6 +138,7 @@ export default function Navbar() {
       </div>
 
       <div
+        ref={navRef}
         className={`absolute top-0 left-0 w-full transition-transform duration-700 delay-500 z-10 ${
           isMenuOpen ? "translate-y-0" : "-translate-y-full"
         }`}

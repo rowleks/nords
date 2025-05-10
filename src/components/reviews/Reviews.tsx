@@ -19,7 +19,7 @@ export default function Reviews() {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-24">
       <div className="max-w-[70rem] mx-auto">
         <div className="flex flex-col px-5 md:px-8">
           <div className="">
@@ -55,13 +55,15 @@ export default function Reviews() {
                       </div>
                     </div>
 
-                    <Image
-                      src={review.avatar}
-                      alt="happy client"
-                      width={90}
-                      height={90}
-                      className="rounded-full"
-                    />
+                    <div className="border-3 rounded-full">
+                      <Image
+                        src={review.avatar}
+                        alt="happy client"
+                        width={90}
+                        height={90}
+                        className="rounded-full"
+                      />
+                    </div>
 
                     <div className="absolute inset-0 flex items-center justify-center opacity-5 -z-10">
                       <Image

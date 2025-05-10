@@ -28,7 +28,7 @@ export default function MiniMenu() {
   }, [activeTab]);
 
   return (
-    <section className="py-20 bg-pink border-y-4">
+    <section className="py-24 bg-pink border-y-4">
       <div className="wrapper">
         <div className="flex flex-col gap-8">
           <Heading {...menuHeading} />

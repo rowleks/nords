@@ -9,7 +9,7 @@ export default function About() {
   return (
     <section>
       <div className="wrapper">
-        <div className="px-5 md:px-8 py-16 md:py-32">
+        <div className="px-5 py-16 md:py-32">
           <div className="flex flex-col lg:flex-row lg:items-center gap-16">
             <div className="rounded-[2rem] border-4">
               <Image
@@ -21,7 +21,7 @@ export default function About() {
               />
             </div>
 
-            <div className="flex flex-col gap-6 lgmax-w-lg">
+            <div className="flex flex-col gap-6 lg:max-w-lg">
               <SubHeading {...aboutSubHeading} />
               <div className="flex flex-col gap-6 text-lg">
                 <p>
@@ -39,8 +39,8 @@ export default function About() {
                 </p>
               </div>
 
-              <div className="tab opacity-100 flex items-center gap-3 bg-pink w-fit px-4 ml-auto">
-                <button className="">VIEW ALL</button>
+              <div className="tab opacity-100 flex items-center gap-3 bg-pink md:w-fit md:px-4 ml-auto max-md:w-56 max-md:h-20">
+                <button className="">ABOUT US</button>
                 <div className="arrow">
                   <Image
                     src="/icons/arrow.svg"

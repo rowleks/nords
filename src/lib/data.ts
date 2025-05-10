@@ -1,4 +1,4 @@
-import { MenuItemType, ReviewType } from "../types/types";
+import { CategoryType, MenuItemType, ReviewType } from "../types/types";
 
 // Menu Tabs
 
@@ -108,5 +108,25 @@ export const reviews: ReviewType[] = [
       "I recently tried the strawberry cake at Nord's and it was amazing! The cake was so moist and the flavor was incredible. I've been dreaming about it ever since.",
     avatar: "/images/client3.webp",
     occupation: "Event Planner",
+  },
+];
+
+// Categories
+
+export const categories: CategoryType[] = [
+  {
+    name: "Desserts",
+    src: "/images/muffin.webp",
+    alt: "A slice of delicious muffin",
+  },
+  {
+    name: "Sides",
+    src: "/images/french-fries.webp",
+    alt: "Delicious fries",
+  },
+  {
+    name: "Burgers",
+    src: "/images/cheeseburger.png",
+    alt: "Delicious fries",
   },
 ];

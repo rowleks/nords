@@ -4,6 +4,11 @@ export interface MenuItemType {
   alt: string;
   price: number;
 }
+export interface CategoryType {
+  name: string;
+  src: string;
+  alt: string;
+}
 
 export interface ReviewType {
   name: string;
