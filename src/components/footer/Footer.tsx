@@ -51,13 +51,11 @@ export default function Footer() {
             <div className="flex flex-col gap-2">
               <h5>CONTACT:</h5>
               <p>
-                Tel: <Link href="tel:(502)634-0931">(502) 634-0931</Link>
+                Tel: <Link href="tel:+2348038209794">(+234) 803 820 9794</Link>
               </p>
               <p>
                 Email:{" "}
-                <Link href="mailto:info@nordsbakery.com">
-                  info@nordsbakery.com
-                </Link>
+                <Link href="mailto:momohrowland@gmail.com">momohrowland@gmail.com</Link>
               </p>
             </div>
           </div>
@@ -74,7 +72,7 @@ export default function Footer() {
 
           <div className="text-center flex flex-col gap-2 md:flex-row-reverse md:justify-between">
             <p>
-              Powered by{" "}
+              Developed by{" "}
               <Link
                 href="https://rowland-momoh.netlify.app/"
                 target="_blank"

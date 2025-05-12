@@ -6,7 +6,7 @@ import Navbar from "@/components/navbar/Navbar";
 import Footer from "@/components/footer/Footer";
 
 export const metadata: Metadata = {
-  title: "Nord's Bakery | Louisville, KY",
+  title: "Nord's Bakery",
   description:
     "Discover Nord's Bakery in Louisville, KY, 40217. Serving the community with fresh donuts, cakes, pastries, and more since 2002. Visit us for custom cakes and delicious treats.",
   keywords: [
