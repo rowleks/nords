@@ -169,7 +169,7 @@ export default function Navbar() {
             isMenuOpen ? "translate-y-0" : "-translate-y-full"
           }`}
         >
-          <NavLinks />
+          <NavLinks onLinkClick={() => setIsMenuOpen(false)} />
         </div>
       </header>
 

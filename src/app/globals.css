@@ -149,7 +149,7 @@
   }
 
   .faq-container {
-    @apply border-3 border-black bg-pink shadow-[3px_3px_0_0_black] cursor-pointer rounded-[1.5rem] w-full p-8 transition-all duration-350 relative;
+    @apply border-3 border-black bg-pink shadow-[3px_3px_0_0_black] cursor-pointer rounded-[1.5rem] w-full p-8 transition-all duration-350 relative hover:shadow-none hover:transform hover:translate-1;
   }
 
   .faq-status {

@@ -19,7 +19,11 @@ export default function NavLinks({ onLinkClick }: NavLinksProps) {
           <Link href="/menu" className="animate-link" onClick={onLinkClick}>
             <h1>Menu</h1>
           </Link>
-          <Link href="#" className="animate-link" onClick={onLinkClick}>
+          <Link
+            href="/categories"
+            className="animate-link"
+            onClick={onLinkClick}
+          >
             <h1>Categories</h1>
           </Link>
           <Link href="#" className="animate-link" onClick={onLinkClick}>

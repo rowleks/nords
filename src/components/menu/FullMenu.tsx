@@ -29,7 +29,7 @@ export default function FullMenu() {
 
   return (
     <section className="py-20">
-      <div className="wrapper">
+      <div className="px-5 md:px-8">
         <div className="flex flex-col gap-8">
           <div className="text-center mb-5">
             <div className="max-w-3xl text-center mx-auto">
