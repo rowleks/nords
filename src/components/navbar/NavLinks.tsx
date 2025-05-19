@@ -26,7 +26,7 @@ export default function NavLinks({ onLinkClick }: NavLinksProps) {
           >
             <h1>Categories</h1>
           </Link>
-          <Link href="#" className="animate-link" onClick={onLinkClick}>
+          <Link href="/contact" className="animate-link" onClick={onLinkClick}>
             <h1>Contact</h1>
           </Link>
         </ul>
