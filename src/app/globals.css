@@ -147,6 +147,26 @@
   .cart-details {
     @apply bg-white flex flex-col w-full min-w-[320px] max-w-[480px] overflow-auto shadow-[0_5px_25px_#00000040] rounded-4xl border-4;
   }
+
+  .faq-container {
+    @apply border-3 border-black bg-pink shadow-[3px_3px_0_0_black] cursor-pointer rounded-[1.5rem] w-full p-8 transition-all duration-350 relative;
+  }
+
+  .faq-status {
+    @apply flex items-center text-xl ml-4 transition-transform duration-500;
+  }
+
+  .faq-status-open {
+    @apply text-red rotate-180;
+  }
+
+  .faq-answer-wrapper {
+    @apply overflow-hidden transition-all duration-400 ease-in-out max-h-0 opacity-0;
+  }
+
+  .faq-answer-open {
+    @apply max-h-40 opacity-100 mt-3;
+  }
 }
 
 @layer utilities {

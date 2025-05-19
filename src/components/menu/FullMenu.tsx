@@ -5,13 +5,12 @@ import { burgers, sides, desserts } from "@/lib/data";
 import MenuCard from "./MenuCard";
 import Heading from "../heading/Heading";
 import { HeadingType } from "@/types/types";
-import Link from "next/link";
 
-export default function MiniMenu() {
+export default function FullMenu() {
   const [activeTab, setActiveTab] = useState("burgers");
 
   const menuHeading: HeadingType = {
-    text: "Our Tasty",
+    text: "Our Delicious",
     featuredText: "Menu",
   };
 
@@ -29,10 +28,18 @@ export default function MiniMenu() {
   }, [activeTab]);
 
   return (
-    <section className="py-24 bg-pink border-y-4">
+    <section className="py-20">
       <div className="wrapper">
         <div className="flex flex-col gap-8">
-          <Heading {...menuHeading} />
+          <div className="text-center mb-5">
+            <div className="max-w-3xl text-center mx-auto">
+              <Heading {...menuHeading} />
+            </div>
+            <span className="max-w-xl">
+              Explore our mouthwatering menu filled with flavorful options to
+              satisfy every craving.
+            </span>
+          </div>
 
           <div className="flex flex-col gap-12 px-5 md:px-8">
             <div className="flex md:items-center gap-4 justify-center flex-wrap">
@@ -71,10 +78,9 @@ export default function MiniMenu() {
               ))}
             </div>
 
-            <div className="ml-auto mt-4">
-              <Link href="/menu" className="tab opacity-100 bg-yellow w-fit">
-                VIEW ALL
-              </Link>
+            <div className="flex items-center justify-between mt-4">
+              <button className="tab bg-yellow w-fit">PREV</button>
+              <button className="tab opacity-100 bg-yellow w-fit">NEXT</button>
             </div>
           </div>
         </div>

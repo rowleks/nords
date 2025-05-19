@@ -14,7 +14,7 @@ import "swiper/css/pagination";
 
 export default function Reviews() {
   const reviewsHeading = {
-    text: "Reviews from our happy",
+    text: "Reviews from happy",
     featuredText: "Customers",
   };
 
