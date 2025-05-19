@@ -1,8 +1,8 @@
 import Link from "next/link";
-import Facebook from "../socials/Facebook";
-import Instagram from "../socials/Instagram";
-import Twitter from "../socials/Twitter";
-import Whatsapp from "../socials/Whatsapp";
+import Facebook from "../svg/Facebook";
+import Instagram from "../svg/Instagram";
+import Twitter from "../svg/Twitter";
+import Whatsapp from "../svg/Whatsapp";
 
 export default function NavLinks() {
   return (
