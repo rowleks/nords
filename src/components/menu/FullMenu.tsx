@@ -28,8 +28,8 @@ export default function FullMenu() {
   }, [activeTab]);
 
   return (
-    <section className="py-20">
-      <div className="px-5 md:px-8">
+    <section className="py-24">
+      <div className="px-5 md:px-8 max-w-[90rem] mx-auto">
         <div className="flex flex-col gap-8">
           <div className="text-center mb-5">
             <div className="max-w-3xl text-center mx-auto">

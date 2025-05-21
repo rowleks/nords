@@ -1,9 +1,9 @@
 import Link from "next/link";
 
-export default function Whatsapp() {
+export default function Whatsapp({ link }: { link?: string }) {
   return (
     <>
-      <Link href="#" className="social-btn">
+      <Link href={link || "#"} className="social-btn" target="_blank">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"

@@ -14,7 +14,7 @@ export default function ContactPage() {
     featuredText: "Touch",
   };
   return (
-    <section className="py-20">
+    <section className="py-24">
       <div className="px-5 md:px-8 wrapper">
         <div className="flex flex-col gap-12">
           <div className="text-center mb-5 flex flex-col gap-5">
@@ -52,7 +52,7 @@ export default function ContactPage() {
 
             <Link
               href="mailto:momohrowland@gmail.com"
-              className="flex flex-col gap-2 faq-container"
+              className="flex flex-col gap-2 card-container"
             >
               <div className="flex items-center gap-4">
                 <Image
@@ -70,7 +70,7 @@ export default function ContactPage() {
 
             <Link
               href="tel:+234803829794"
-              className="flex flex-col gap-2 faq-container"
+              className="flex flex-col gap-2 card-container"
             >
               <div className="flex items-center gap-4">
                 <Image
@@ -89,7 +89,7 @@ export default function ContactPage() {
             {/* <Link
               href="https://www.google.com/maps?q=38.2167866,-85.7454471"
               target="_blank"
-              className="flex flex-col gap-2 faq-container"
+              className="flex flex-col gap-2 card-container"
             >
               <div className="flex items-center gap-4">
                 <Image

@@ -21,7 +21,7 @@ const faqs: FaqItem[] = [
       "Yes, we do! Our menu includes a variety of vegetarian and vegan-friendly options, such as veggie burgers, fresh salads, and plant-based sides.",
   },
   {
-    question: "Can I place an order online?",
+    question: "Can I also place an order online?",
     answer:
       "Absolutely! You can order directly through our website or mobile app for pickup or delivery. It’s fast, easy, and convenient!",
   },
@@ -47,7 +47,7 @@ export default function Faqs() {
   };
 
   return (
-    <section className="py-20">
+    <section className="py-24">
       <div className="wrapper">
         <div className="px-5 md:px-8">
           <div className="flex flex-col gap-8">
@@ -61,11 +61,11 @@ export default function Faqs() {
                 return (
                   <div
                     key={index}
-                    className="faq-container"
+                    className="card-container"
                     onClick={() => toggleFaq(index)}
                   >
                     <div className="font-semibold text-lg flex justify-between items-center">
-                      <h5 className="mb-0 text-3xl">{faq.question}</h5>
+                      <h5 className="mb-0 text-2xl">{faq.question}</h5>
                       <span
                         className={`faq-status ${
                           isOpen ? " faq-status-open" : ""
@@ -80,7 +80,7 @@ export default function Faqs() {
                         isOpen ? "faq-answer-open" : ""
                       }`}
                     >
-                      <span className="text-lg">{faq.answer}</span>
+                      <span className="md:text-lg">{faq.answer}</span>
                     </div>
                   </div>
                 );

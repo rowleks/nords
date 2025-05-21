@@ -2,10 +2,10 @@ import Image from "next/image";
 import SubHeading from "../heading/SubHeading";
 import Link from "next/link";
 
-export default function About() {
+export default function Story() {
   const aboutSubHeading = {
-    text: "Made with love",
-    featuredText: "Daily",
+    text: "Where it all",
+    featuredText: "Began",
   };
   return (
     <section>
@@ -23,28 +23,27 @@ export default function About() {
             </div>
 
             <div className="flex flex-col gap-6 lg:max-w-lg">
+              <p className="max-md:text-center text-lg text-red">Our Story</p>
               <SubHeading {...aboutSubHeading} />
               <div className="flex flex-col gap-6 text-lg">
                 <p>
-                  At Nord&apos;s Bakery, we believe that the simplest pleasures
-                  in life often bring the most joy. Freshly baked goods, made
-                  with love and care, have the power to bring people together
-                  and make life a little sweeter.
+                  We started with the love of good food and the vision of
+                  redefining the concept of fast food. What began as a small
+                  idea has grown into a place where taste, quality and community
+                  come together.
                 </p>
                 <p>
-                  Our bakery is dedicated to providing you with the most
-                  delicious and satisfying treats, perfect for any occasion.
-                  Whether you&apos;re celebrating a special day or just need a
-                  pick-me-up, we&apos;re here to help make your day a little
-                  brighter.
+                  From our first burger to every meal we serve today, our story
+                  is about passion, innovation, and a commitment to making every
+                  life sweet.
                 </p>
               </div>
 
               <Link
-                href="/about"
-                className="tab opacity-100 flex items-center gap-3 bg-pink md:w-fit md:px-4 ml-auto max-md:w-56 max-md:h-20"
+                href="/menu"
+                className="tab opacity-100 flex items-center gap-3 bg-pink md:w-fit md:px-4 max-md:mx-auto md:ml-auto max-md:w-64 max-md:h-20"
               >
-                <button className="">ABOUT US</button>
+                <button className="">OUR MENU</button>
                 <div className="arrow">
                   <Image
                     src="/icons/arrow.svg"

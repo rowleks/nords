@@ -11,7 +11,7 @@ export default function FullCategories() {
 
   return (
     <section>
-      <div className="px-5 md:px-8">
+      <div className="px-5 md:px-8 max-w-[90rem] mx-auto">
         <div className="py-16 md:py-32 flex flex-col gap-12 md:gap-16">
           <div className="text-center max-w-4xl mx-auto">
             <Heading {...CategoriesHeading} />

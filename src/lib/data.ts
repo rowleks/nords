@@ -1,4 +1,10 @@
-import { CategoryType, MenuItemType, ReviewType } from "../types/types";
+import {
+  CategoryType,
+  MenuItemType,
+  ReviewType,
+  StaffType,
+  StepsType,
+} from "../types/types";
 
 // Menu Tabs
 
@@ -128,5 +134,76 @@ export const categories: CategoryType[] = [
     name: "Burgers",
     src: "/images/cheeseburger.png",
     alt: "Delicious fries",
+  },
+];
+
+export const stepsData: StepsType[] = [
+  {
+    stepNumber: "01",
+    stepTitle: "STEP 1:",
+    stepSubTitle: "Sourcing Quality Ingredient",
+    stepDescription:
+      "We carefully source only the freshest and highest-quality ingredients, ensuring every component of our menu delivers exceptional flavor and nutrition.",
+    imageSrc: "/images/step1.webp",
+    imageAlt: "step1",
+  },
+  {
+    stepNumber: "02",
+    stepTitle: "STEP 2:",
+    stepSubTitle: "Crafting with Care",
+    stepDescription:
+      "Each dish is crafted with care by our chefs, who use their expertise and attention to detail to create meals that meet our high standards.",
+    imageSrc: "/images/step2.webp",
+    imageAlt: "step2",
+  },
+  {
+    stepNumber: "03",
+    stepTitle: "STEP 3:",
+    stepSubTitle: "Serving with Speed",
+    stepDescription:
+      "Your meal is served quickly and efficiently, so you can enjoy it fresh and at its best every time.",
+    imageSrc: "/images/step3.webp",
+    imageAlt: "step3",
+  },
+];
+
+/* 
+Include these for staff links
+  links: {
+      facebook: "https://facebook.com",
+      instagram: "https://instagram.com",
+      twitter: "https://x.com",
+      linkedIn: "https://linkedin.com",
+    }, */
+export const staff: StaffType[] = [
+  {
+    name: "Michael Reynolds",
+    avatar: "/images/staff1.webp",
+    role: "Head Chef",
+  },
+  {
+    name: "Sophia Martinez",
+    avatar: "/images/staff2.webp",
+    role: "Sous Chef",
+  },
+  {
+    name: "James Carter",
+    avatar: "/images/staff3.webp",
+    role: "Pastry Chef",
+  },
+  {
+    name: "Olivia Bennett",
+    avatar: "/images/staff4.webp",
+    role: "Restaurant Manager",
+  },
+  {
+    name: "Ethan Kim",
+    avatar: "/images/staff5.webp",
+    role: "Line Cook",
+  },
+  {
+    name: "Grace Thompson",
+    avatar: "/images/staff6.webp",
+    role: "Social Media Manager",
   },
 ];

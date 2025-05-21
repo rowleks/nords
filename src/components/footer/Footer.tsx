@@ -7,7 +7,7 @@ import Whatsapp from "../svg/Whatsapp";
 
 export default function Footer() {
   return (
-    <footer className="bg-black text-white py-20 pb-10">
+    <footer className="bg-black text-white py-24 pb-10">
       <div className="wrapper px-5 md:px-8">
         <div className="flex flex-col gap-16">
           <Link href="/" className="cursor-pointer relative z-20 self-center">
@@ -34,9 +34,9 @@ export default function Footer() {
               <div className="flex flex-col gap-2 uppercase">
                 <h5>MENU:</h5>
                 <nav className="flex flex-col gap-2">
-                  <Link href="/breakfast">Desserts</Link>
-                  <Link href="/lunch">Sides</Link>
-                  <Link href="/dinner">Burgers</Link>
+                  <Link href="/categories/desserts">Desserts</Link>
+                  <Link href="/categories/sides">Sides</Link>
+                  <Link href="/categories/burgers">Burgers</Link>
                 </nav>
               </div>
             </div>
@@ -72,17 +72,29 @@ export default function Footer() {
             </div>
           </div>
 
-          <div className="text-center flex flex-col gap-2 md:flex-row-reverse md:justify-between">
-            <p>
-              Developed by{" "}
-              <Link
-                href="https://rowland-momoh.netlify.app/"
-                target="_blank"
-                className="text-yellow"
-              >
-                Rowland Momoh
-              </Link>
-            </p>
+          <div className="text-center flex flex-col gap-2 md:flex-row-reverse md:justify-between items-center">
+            <div className="flex flex-col gap-2">
+              <p>
+                Designed by{" "}
+                <Link
+                  href="https://www.flowaze.com/"
+                  target="_blank"
+                  className="text-yellow"
+                >
+                  Flowaze
+                </Link>
+              </p>
+              <p>
+                Developed by{" "}
+                <Link
+                  href="https://rowland-momoh.netlify.app/"
+                  target="_blank"
+                  className="text-yellow"
+                >
+                  Rowland Momoh
+                </Link>
+              </p>
+            </div>
             <p>
               &copy; {new Date().getFullYear()} Nords Bakery. All rights
               reserved.
